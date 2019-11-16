@@ -6,6 +6,7 @@ public class SongManager : MonoBehaviour
 {
     int note_number;
     public GameObject MusicNote;
+    public GameObject MusicNote_R;
     public GameObject metro;
     public static float beatsShownInAdvance;
     //the current position of the song (in seconds)
@@ -77,8 +78,8 @@ public class SongManager : MonoBehaviour
         if (nextIndex < notes.Length && notes[nextIndex] < songPosInBeats + beatsShownInAdvance)
         {
             Instantiate(MusicNote, new Vector3(-.92f, 3.76f, 0), Quaternion.identity);
-            
 
+            
 
 
             nextIndex++;

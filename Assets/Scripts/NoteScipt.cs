@@ -12,7 +12,10 @@ public class NoteScipt : MonoBehaviour
     public bool canBePressed;
     public bool overLap = true;
     public int noteCountCollisions = 0;
-    public int  activatorCountCollisions = 0;
+    private int  activatorCountCollisions = 0;
+
+    bool note_Early;
+    GameObject box;
 
 
      
@@ -87,7 +90,11 @@ public class NoteScipt : MonoBehaviour
         ///
 
 
-        
+        if (note_Early)
+        {
+             box = GameObject.Find("timing_checker");
+            box.GetComponent<Renderer>().material.color = Color.green;
+        }
 
 
     }
@@ -96,12 +103,14 @@ public class NoteScipt : MonoBehaviour
     {
         if (other.tag == "Activator")
         {
-            
-
             activatorCountCollisions++;
-
-
         }
+        if (other.tag == "Activator_Early")
+        {
+            note_Early=true;
+            activatorCountCollisions++;
+        }
+
         //if the music note is touching another music note
         if (other.tag == "MusicNote")
         {
@@ -129,7 +138,11 @@ public class NoteScipt : MonoBehaviour
             
         }
 
-
+        if (other.tag == "Activator_Early")
+        {
+            note_Early = false;
+            
+        }
 
 
 
