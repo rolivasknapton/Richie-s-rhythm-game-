@@ -981,9 +981,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72da2c13a3a00b848907696080e3d971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicNote: {fileID: 2713050941545869216, guid: 1160acbfadaa5204daa639ab3be99de7,
+  MusicNote: {fileID: 2819583299205413151, guid: 1160acbfadaa5204daa639ab3be99de7,
     type: 3}
-  MusicNote_R: {fileID: 0}
+  MusicNote_R: {fileID: 8159501678196916284, guid: b1e29d457b7ffad46bc06a01c8f77553,
+    type: 3}
   metro: {fileID: 15781743770033049, guid: 6410b969684c1a045b080b93d73f7bde, type: 3}
   dsptimesong: 0
   firstBeatOffset: 0
@@ -1322,8 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe622c33780f75a42be5de0f60a18218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteScript: {fileID: 8667615345186929342, guid: 1160acbfadaa5204daa639ab3be99de7,
-    type: 3}
+  noteScript: {fileID: 0}
   noteList: []
   first: {fileID: 0}
 --- !u!1 &1549064901

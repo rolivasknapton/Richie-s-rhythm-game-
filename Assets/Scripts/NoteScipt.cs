@@ -6,8 +6,9 @@ public class NoteScipt : MonoBehaviour
 {
     Vector2 SpawnPos;
     Vector2 RemovePos;
+   
 
-    float beatOfThisNote;
+    public float beatOfThisNote;
     float positionInSong;
     public bool canBePressed;
     public bool overLap = true;
@@ -17,7 +18,7 @@ public class NoteScipt : MonoBehaviour
     bool note_Early;
     GameObject box;
 
-
+    
      
 
 
@@ -26,6 +27,7 @@ public class NoteScipt : MonoBehaviour
     {
         SpawnPos = new Vector2(-.92f, 3.76f);
         RemovePos = new Vector2(-.92f, -5.7f);
+            
         beatOfThisNote = SongManager.songPosInBeats;
         
 
@@ -35,10 +37,10 @@ public class NoteScipt : MonoBehaviour
         
 
         //name
-        this.gameObject.name = "" + beatOfThisNote;
-        
+        //this.gameObject.name = "" + beatOfThisNote;
+        //this.name = "0" + beatOfThisNote;
 
-        this.name = "0" + beatOfThisNote;
+        
         //checks if the notes are overlapping
         //counts note collisions on spawn
         int noteTotalCollisions = 0;
@@ -59,6 +61,9 @@ public class NoteScipt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Move();
+       
         if (songInput.pressed && canBePressed)
         {
 
@@ -85,11 +90,11 @@ public class NoteScipt : MonoBehaviour
         ///this one sets their position
         ///
         ///transform.position = Vector2.Lerp(SpawnPos,RemovePos,(beatsShownInAdvance - (beatOfThisNote - songPosInBeats)) / beatsShownInAdvance);
-        transform.position = Vector2.Lerp(SpawnPos, RemovePos, ((beatOfThisNote - SongManager.songPosInBeats) * -1) / 7);
+        
         ///Debug.Log(beatOfThisNote - SongManager.songPosInBeats);
         ///
 
-
+        //early checker
         if (note_Early)
         {
              box = GameObject.Find("timing_checker");
@@ -98,7 +103,10 @@ public class NoteScipt : MonoBehaviour
 
 
     }
-
+    public virtual void Move()
+    {
+        transform.position = Vector2.Lerp(SpawnPos, RemovePos, ((beatOfThisNote - SongManager.songPosInBeats) * -1) / 7);
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Activator")

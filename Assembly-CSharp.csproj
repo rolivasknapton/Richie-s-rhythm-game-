@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Metronome.cs" />
     <Compile Include="Assets\Scripts\NoteScipt.cs" />
+    <Compile Include="Assets\Scripts\Right_Note_Properties.cs" />
     <Compile Include="Assets\Scripts\songInput.cs" />
     <Compile Include="Assets\Scripts\SongManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
