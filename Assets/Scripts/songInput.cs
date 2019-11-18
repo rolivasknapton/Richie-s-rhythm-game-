@@ -7,12 +7,10 @@ public class songInput : MonoBehaviour
     public static bool pressed = false;
     public NoteScipt noteScript;
     
-    int[] noteStack;
-    public List<GameObject> noteList;
-
-    public GameObject first;
-
-    bool notes_onscreen;
+    
+    private List<GameObject> noteList;
+    private GameObject first;
+    private bool notes_onscreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,23 +23,10 @@ public class songInput : MonoBehaviour
     void Update()
     {
         //store how many there are 
-        
 
-        GameObject[] gameObjects;
-        gameObjects = GameObject.FindGameObjectsWithTag("MusicNote");
-        print(gameObjects.Length);
-        if (gameObjects.Length >= 1)
-        {
-            notes_onscreen = true;
-        }
-        else
-        {
-            notes_onscreen = false;
-        }
-        if (notes_onscreen)
-        {
-            MakeTopNoteSelectable(gameObjects[0]);
-        }
+
+        Find_First();
+
 
         //
 
@@ -68,6 +53,24 @@ public class songInput : MonoBehaviour
         
         }
     }
+    public virtual void Find_First()
+    {
+        GameObject[] gameObjects;
+        gameObjects = GameObject.FindGameObjectsWithTag("MusicNote");
+        print(gameObjects.Length);
+        if (gameObjects.Length >= 1)
+        {
+            notes_onscreen = true;
+        }
+        else
+        {
+            notes_onscreen = false;
+        }
+        if (notes_onscreen)
+        {
+            MakeTopNoteSelectable(gameObjects[0]);
+        }
+    }
     void OnMouseDown()
     {
         
@@ -83,7 +86,7 @@ public class songInput : MonoBehaviour
         pressed = false;
     }
     
-    private void MakeTopNoteSelectable(GameObject first)
+    public void MakeTopNoteSelectable(GameObject first)
     {
         first.GetComponent<Renderer>().material.color = Color.red;
         NoteScipt nrScript = first.GetComponent<NoteScipt>();

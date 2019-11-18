@@ -88,7 +88,7 @@ public class SongManager : MonoBehaviour
 
             nextIndex++;
         }
-        if (nextIndex_r < notes_r.Length && notes_r[nextIndex] < songPosInBeats + beatsShownInAdvance)
+        if (nextIndex_r < notes_r.Length && notes_r[nextIndex_r] < songPosInBeats + beatsShownInAdvance)
         {
             Instantiate(MusicNote_R, new Vector3(.92f, 3.76f, 0), Quaternion.identity);
 

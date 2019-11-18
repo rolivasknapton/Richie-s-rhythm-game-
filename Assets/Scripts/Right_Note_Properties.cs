@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Right_Note_Properties : NoteScipt
 {
-    Vector2 SpawnPos_R;
-    Vector2 RemovePos_R;
-    // Start is called before the first frame update
-    void Start()
-    {
-        SpawnPos_R = new Vector2(.92f, 3.76f);
-        RemovePos_R = new Vector2(.92f, -5.7f);
-    }
+    Vector2 SpawnPos_R = new Vector2(.92f, 3.76f);
+    Vector2 RemovePos_R = new Vector2(.92f, -5.7f);
 
+    
     // Update is called once per frame
     void Update()
     {
+
         Move();
 
     }

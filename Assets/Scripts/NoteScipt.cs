@@ -18,8 +18,8 @@ public class NoteScipt : MonoBehaviour
     bool note_Early;
     GameObject box;
 
-    
-     
+
+    public float LerpSpeed;
 
 
     // Start is called before the first frame update
@@ -29,8 +29,8 @@ public class NoteScipt : MonoBehaviour
         RemovePos = new Vector2(-.92f, -5.7f);
             
         beatOfThisNote = SongManager.songPosInBeats;
-        
 
+        
         // Pick a random, saturated and not-too-dark color
         GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
@@ -63,7 +63,10 @@ public class NoteScipt : MonoBehaviour
     {
 
         Move();
-       
+
+        //how fast the notes fall
+
+        LerpSpeed = ((beatOfThisNote - SongManager.songPosInBeats) * -1) / 7;
         if (songInput.pressed && canBePressed)
         {
 
@@ -105,7 +108,7 @@ public class NoteScipt : MonoBehaviour
     }
     public virtual void Move()
     {
-        transform.position = Vector2.Lerp(SpawnPos, RemovePos, ((beatOfThisNote - SongManager.songPosInBeats) * -1) / 7);
+        transform.position = Vector2.Lerp(SpawnPos, RemovePos, LerpSpeed);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
