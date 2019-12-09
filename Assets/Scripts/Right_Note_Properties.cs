@@ -9,14 +9,17 @@ public class Right_Note_Properties : NoteScipt
 
     
     // Update is called once per frame
-    void Update()
-    {
 
-        Move();
-
-    }
     public override void Move()
     {
         transform.position = Vector2.Lerp(SpawnPos_R, RemovePos_R, ((beatOfThisNote - SongManager.songPosInBeats) * -1) / 7);
+    }
+    public override void Pressed()
+    {
+        if (Right_Button_Properties.pressed_r && canBePressed)
+        {
+            //print("pressed");
+            this.gameObject.SetActive(false);
+        }
     }
 }

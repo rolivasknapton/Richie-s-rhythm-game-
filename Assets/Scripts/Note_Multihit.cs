@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Note_Multihit : NoteScipt
+{
+    Vector2 SpawnPos_m = new Vector2(.92f, 3.76f);
+    Vector2 RemovePos_m = new Vector2(.92f, -5.7f);
+
+
+    // Update is called once per frame
+
+    public override void Move()
+    {
+        transform.position = Vector2.Lerp(SpawnPos_m, RemovePos_m, ((beatOfThisNote - SongManager.songPosInBeats) * -1) / 7);
+    }
+    public override void Pressed()
+    {
+        if (songInput.pressed && canBePressed)
+        {
+            print("pressed");
+            
+        }
+    }
+}

@@ -5,8 +5,7 @@ using UnityEngine;
 public class SongManager : MonoBehaviour
 {
     int note_number;
-    public GameObject MusicNote;
-    public GameObject MusicNote_R;
+    
     public GameObject metro;
     public static float beatsShownInAdvance;
     //the current position of the song (in seconds)
@@ -22,15 +21,20 @@ public class SongManager : MonoBehaviour
     public  float dsptimesong;
 
     //beats per minute of a song
-    public static float bpm = 140f;
+    [SerializeField]
+    public static float bpm;
 
+    public GameObject MusicNote;
+    public GameObject MusicNote_R;
+    public GameObject MusicNote_Multi;
     //keep all the position-in-beats of notes in the song
-    float[] notes = {1,4.5f,5,5.5f,6,7,8,9,10,11,12,13,14,15,16 };
-    float[] notes_r = { 1, 4.5f, 5, 5.5f, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
-
+    float[] notes = {1,4,9,10,16,19,25,26,29,33,34, 36,36.5f,39,42.5f,43,45,49,51,53,55,57,62,64,65 };
+    float[] notes_r = {1,5, 8, 13,15, 17,20,21,24,31,33,35f, 35.5f,41,42,43.5f,44,47,48,50,54,60.5f,65};
+    float[] notes_multi = {11,27,37 };
     //the index of the next note to be spawned
     public static int nextIndex = 0;
     public static int nextIndex_r = 0;
+    public static int nextIndex_multi = 0;
 
 
 
@@ -46,8 +50,8 @@ public class SongManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        firstBeatOffset =.5f;
-
+        firstBeatOffset =0f;
+        Setbeatsperminute();
        
 
         //Create a new cube primitive to set the color on
@@ -97,16 +101,31 @@ public class SongManager : MonoBehaviour
 
             nextIndex_r++;
         }
+        if (nextIndex_multi < notes_multi.Length && notes_multi[nextIndex_multi] < songPosInBeats + beatsShownInAdvance)
+        {
+            Instantiate(MusicNote_Multi, new Vector3(.92f, 3.76f, 0), Quaternion.identity);
+
+
+
+
+            nextIndex_multi++;
+        }
 
 
 
         //spawns the metronome when the first beat is played. 
-        if (songPosInBeats >= 1&&metroisnothere)
+        if (songPosInBeats >= 2&&metroisnothere)
         {
             //Instantiate(metro, new Vector3(0, 0, 0), Quaternion.identity); metroisnothere = false;
         }
         //Debug.Log(songPosInBeats);
     }
+
+    public virtual void Setbeatsperminute()
+    {
+        bpm = 161f;
+    }
+        //why is this an IEnumerator?
     IEnumerator songStart()
     {
         GetComponent<AudioSource>().Play();

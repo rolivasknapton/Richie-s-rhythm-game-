@@ -63,15 +63,11 @@ public class NoteScipt : MonoBehaviour
     {
 
         Move();
-
+        Pressed();
         //how fast the notes fall
 
         LerpSpeed = ((beatOfThisNote - SongManager.songPosInBeats) * -1) / 7;
-        if (songInput.pressed && canBePressed)
-        {
-
-            gameObject.SetActive(false);
-        }
+        
 
         //activator
         if(activatorCountCollisions >=2)
@@ -103,6 +99,10 @@ public class NoteScipt : MonoBehaviour
              box = GameObject.Find("timing_checker");
             box.GetComponent<Renderer>().material.color = Color.green;
         }
+        else
+        {
+            box.GetComponent<Renderer>().material.color = Color.white;
+        }
 
 
     }
@@ -123,13 +123,13 @@ public class NoteScipt : MonoBehaviour
         }
 
         //if the music note is touching another music note
-        if (other.tag == "MusicNote")
+        /*if (other.tag == "MusicNote")
         {
 
             overLap = true;
           noteCountCollisions++;
 
-        }
+        }*/
         //destroy this object when colliding with the end position
         if (other.tag == "EndPosition")
         {
@@ -142,7 +142,8 @@ public class NoteScipt : MonoBehaviour
         {
             canBePressed = false;
             songInput.pressed = false;
-            gameObject.SetActive(false);
+            gameObject.tag = "Unactive";
+            //gameObject.SetActive(false);
         }
         if (other.tag == "MusicNote")
         {
@@ -158,6 +159,14 @@ public class NoteScipt : MonoBehaviour
 
 
 
+    }
+    public virtual void Pressed()
+    {
+        if (songInput.pressed && canBePressed)
+        {
+            print("pressed");
+            this.gameObject.SetActive(false);
+        }
     }
     
 }

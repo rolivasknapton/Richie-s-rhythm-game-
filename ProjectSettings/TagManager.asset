@@ -8,6 +8,8 @@ TagManager:
   - MusicNote
   - EndPosition
   - Activator_Early
+  - MusicNote_R
+  - Unactive
   layers:
   - Default
   - TransparentFX
