@@ -18,7 +18,7 @@ public class NoteScipt : MonoBehaviour
     bool note_Early;
     GameObject box;
 
-
+    public static GameObject particle_hit;
     public float LerpSpeed;
 
 
@@ -162,10 +162,15 @@ public class NoteScipt : MonoBehaviour
     }
     public virtual void Pressed()
     {
+        GameObject particle = NoteScipt.particle_hit;
+
+        
+
         if (songInput.pressed && canBePressed)
         {
             print("pressed");
             this.gameObject.SetActive(false);
+            Object.Instantiate(particle);
         }
     }
     
