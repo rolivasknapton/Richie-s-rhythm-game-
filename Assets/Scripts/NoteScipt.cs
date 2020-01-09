@@ -18,7 +18,7 @@ public class NoteScipt : MonoBehaviour
     bool note_Early;
     GameObject box;
 
-    public static GameObject particle_hit;
+    
     public float LerpSpeed;
 
 
@@ -94,6 +94,7 @@ public class NoteScipt : MonoBehaviour
         ///
 
         //early checker
+        /*
         if (note_Early)
         {
              box = GameObject.Find("timing_checker");
@@ -103,7 +104,7 @@ public class NoteScipt : MonoBehaviour
         {
             box.GetComponent<Renderer>().material.color = Color.white;
         }
-
+        */
 
     }
     public virtual void Move()
@@ -162,7 +163,7 @@ public class NoteScipt : MonoBehaviour
     }
     public virtual void Pressed()
     {
-        GameObject particle = NoteScipt.particle_hit;
+        
 
         
 
@@ -170,7 +171,7 @@ public class NoteScipt : MonoBehaviour
         {
             print("pressed");
             this.gameObject.SetActive(false);
-            Object.Instantiate(particle);
+            
         }
     }
     

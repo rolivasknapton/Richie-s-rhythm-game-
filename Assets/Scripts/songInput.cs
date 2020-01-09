@@ -25,42 +25,47 @@ public class songInput : MonoBehaviour
         //store how many there are         
         Find_First();
 
+        Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+        Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
+
         //touch and creates lines
-       for(int i = 0;i < Input.touchCount; i ++)
-        {
-            //this is a way to draw lines
-            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
-            Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
-        }
         /*
-        for (int i = 0; i < Input.touchCount; ++i)
-        {
-            if (Input.GetTouch(i).phase == TouchPhase.Began)
-            {
-                this.GetComponent<Renderer>().material.color = Color.blue;
-                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+        for(int i = 0;i < Input.touchCount; i ++)
+         {
+             //this is a way to draw lines
+             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
+             Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
+         }
+        /*
+         /*
+         for (int i = 0; i < Input.touchCount; ++i)
+         {
+             if (Input.GetTouch(i).phase == TouchPhase.Began)
+             {
+                 this.GetComponent<Renderer>().material.color = Color.blue;
+                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
 
 
-                RaycastHit raycastHit;
-                // Create a particle if hit
-                if (Physics.Raycast(ray, out raycastHit))
-                {
-                    if (raycastHit.collider.CompareTag("Activator"))
-                    {
+                 RaycastHit raycastHit;
+                 // Create a particle if hit
+                 if (Physics.Raycast(ray, out raycastHit))
+                 {
+                     if (raycastHit.collider.CompareTag("Activator"))
+                     {
 
-                       // Destroy(gameObject);
-                    }
-                }
-            }
-            if (Input.GetTouch(i).phase == TouchPhase.Ended)
-            {
-                this.GetComponent<Renderer>().material.color = Color.white;
-            }
-            // Construct a ray from the current touch coordinates
+                        // Destroy(gameObject);
+                     }
+                 }
+             }
+             if (Input.GetTouch(i).phase == TouchPhase.Ended)
+             {
+                 this.GetComponent<Renderer>().material.color = Color.white;
+             }
+             // Construct a ray from the current touch coordinates
 
 
-        }
-        */
+         }
+         */
     }
     public virtual void Find_First()
     {
