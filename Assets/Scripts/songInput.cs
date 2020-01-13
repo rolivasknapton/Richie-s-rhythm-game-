@@ -25,7 +25,9 @@ public class songInput : MonoBehaviour
         //store how many there are         
         Find_First();
 
+        //this equates touchposition to thhe camera's position
         Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+
         Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
 
         //touch and creates lines
