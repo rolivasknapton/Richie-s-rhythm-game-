@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NoteScipt : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class NoteScipt : MonoBehaviour
 
     bool note_Early;
     GameObject box;
+    GameObject text;
+    private Text text_content;
 
     
     public float LerpSpeed;
@@ -94,17 +97,20 @@ public class NoteScipt : MonoBehaviour
         ///
 
         //early checker
-        /*
+        
         if (note_Early)
         {
              box = GameObject.Find("timing_checker");
+            text = GameObject.Find("Early_Text");
             box.GetComponent<Renderer>().material.color = Color.green;
+            text_content = text.GetComponent<Text>();
+            text_content.text = "Early!";
         }
         else
         {
             box.GetComponent<Renderer>().material.color = Color.white;
         }
-        */
+        
 
     }
     public virtual void Move()
