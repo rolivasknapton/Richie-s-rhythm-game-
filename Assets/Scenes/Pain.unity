@@ -1407,6 +1407,8 @@ MonoBehaviour:
     type: 3}
   MusicNote_Multi: {fileID: 2838237097904988234, guid: 7125e1da01be2f24191d1de9598bc96b,
     type: 3}
+  MusicNote_Multi_l: {fileID: 8571462195122028732, guid: e8dfbf18d0caccc469ef44bd7b054cf4,
+    type: 3}
   firstBeatOffset: 0
 --- !u!4 &925196079
 Transform:

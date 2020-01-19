@@ -11,6 +11,8 @@ public class songInput : MonoBehaviour
     private List<GameObject> noteList;
     private GameObject first;
     private bool notes_onscreen;
+
+    Vector3 colliderPoisition;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,45 +27,76 @@ public class songInput : MonoBehaviour
         //store how many there are         
         Find_First();
 
-        
+
         //touch and creates lines
+        Find_Touch_Position();
         
-        for(int i = 0;i < Input.touchCount; i ++)
-         {
-             //this is a way to draw lines
-             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
-             Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
-         }
-        
-         /*
-         for (int i = 0; i < Input.touchCount; ++i)
-         {
-             if (Input.GetTouch(i).phase == TouchPhase.Began)
-             {
-                 this.GetComponent<Renderer>().material.color = Color.blue;
-                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+
+        /*
+        for (int i = 0; i < Input.touchCount; ++i)
+        {
+            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            {
+                this.GetComponent<Renderer>().material.color = Color.blue;
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
 
 
-                 RaycastHit raycastHit;
-                 // Create a particle if hit
-                 if (Physics.Raycast(ray, out raycastHit))
-                 {
-                     if (raycastHit.collider.CompareTag("Activator"))
-                     {
+                RaycastHit raycastHit;
+                // Create a particle if hit
+                if (Physics.Raycast(ray, out raycastHit))
+                {
+                    if (raycastHit.collider.CompareTag("Activator"))
+                    {
 
-                        // Destroy(gameObject);
-                     }
-                 }
-             }
-             if (Input.GetTouch(i).phase == TouchPhase.Ended)
-             {
-                 this.GetComponent<Renderer>().material.color = Color.white;
-             }
-             // Construct a ray from the current touch coordinates
+                       // Destroy(gameObject);
+                    }
+                }
+            }
+            if (Input.GetTouch(i).phase == TouchPhase.Ended)
+            {
+                this.GetComponent<Renderer>().material.color = Color.white;
+            }
+            // Construct a ray from the current touch coordinates
 
 
-         }
-         */
+        }
+        */
+    }
+    public virtual void Find_Touch_Position()
+    {
+        for (int i = 0; i < Input.touchCount; i++)
+        {
+            //this is a way to draw lines
+            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
+            Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
+
+            //possibly a way to see the mulitpile touchpositions?
+            string touchpos = "" + touchPosition + i;
+            Debug.Log(touchpos);
+            
+            if (Input.GetTouch(i).phase == TouchPhase.Began && touchPosition.x <= -0.90 && touchPosition.y <= -3)
+            {
+                
+                this.GetComponent<Renderer>().material.color = Color.blue;
+                pressed = true;
+                
+            }
+            else
+            {
+                this.GetComponent<Renderer>().material.color = Color.white;
+                pressed = false;
+            }
+            /*
+            if (Input.GetTouch(i).phase == TouchPhase.Ended)
+            {
+                this.GetComponent<Renderer>().material.color = Color.white;
+                pressed = false;
+              
+            }
+            */
+
+
+        }
     }
     public virtual void Find_First()
     {

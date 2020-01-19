@@ -109,6 +109,7 @@ public class NoteScipt : MonoBehaviour
         else
         {
             box.GetComponent<Renderer>().material.color = Color.white;
+            
         }
         
 

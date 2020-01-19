@@ -2,7 +2,6 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Despawn
-    - Menu
     - Metronome
     - NoteScipt
     - Note_Multihit
@@ -17,61 +16,10 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Menu.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 9676}
-    - Class: 114
-      Script: {instanceID: 9826}
-    - Class: 114
-      Script: {instanceID: 9866}
-    - Class: 114
-      Script: {instanceID: 10242}
-    - Class: 114
-      Script: {instanceID: 10584}
-    - Class: 114
-      Script: {instanceID: 11032}
-    - Class: 114
-      Script: {instanceID: 11378}
-    - Class: 114
-      Script: {instanceID: 11430}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
     Assets/Scenes/Pain.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -114,32 +62,36 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9676}
+      Script: {instanceID: 9696}
     - Class: 114
-      Script: {instanceID: 10022}
+      Script: {instanceID: 9846}
     - Class: 114
-      Script: {instanceID: 10036}
+      Script: {instanceID: 10042}
     - Class: 114
-      Script: {instanceID: 10132}
+      Script: {instanceID: 10056}
     - Class: 114
-      Script: {instanceID: 10206}
+      Script: {instanceID: 10152}
     - Class: 114
-      Script: {instanceID: 10242}
+      Script: {instanceID: 10226}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 10262}
     - Class: 114
-      Script: {instanceID: 10784}
+      Script: {instanceID: 10466}
     - Class: 114
-      Script: {instanceID: 11032}
+      Script: {instanceID: 10804}
     - Class: 114
-      Script: {instanceID: 11046}
+      Script: {instanceID: 11052}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11066}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11394}
+      Script: {instanceID: 11398}
+    - Class: 114
+      Script: {instanceID: 11414}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -150,6 +102,8 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
       Script: {instanceID: 0}
     - Class: 223
       Script: {instanceID: 0}
@@ -672,6 +626,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Menu.unity
   - Assets/Scenes/Pain.unity
   playerPath: C:/Users/richi/OneDrive/Desktop/beatgame2.apk
