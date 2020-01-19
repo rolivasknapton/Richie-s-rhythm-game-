@@ -62,16 +62,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Note_Multihit_l.cs" />
     <Compile Include="Assets\Particle Ingredient Pack\Script\csColorChangerinSampleScene.cs" />
     <Compile Include="Assets\Particle Ingredient Pack\Script\csDemoScenceControl.cs" />
     <Compile Include="Assets\Particle Ingredient Pack\Script\csMouseOrbit.cs" />
     <Compile Include="Assets\Particle Ingredient Pack\Script\csParticleMake.cs" />
     <Compile Include="Assets\Particle Ingredient Pack\Script\csRotate.cs" />
-    <Compile Include="Assets\sca.cs" />
     <Compile Include="Assets\Scripts\Despawn.cs" />
     <Compile Include="Assets\Scripts\Metronome.cs" />
     <Compile Include="Assets\Scripts\Note_Multihit.cs" />
+    <Compile Include="Assets\Scripts\Note_Multihit_l.cs" />
     <Compile Include="Assets\Scripts\NoteScipt.cs" />
     <Compile Include="Assets\Scripts\PressAnimation.cs" />
     <Compile Include="Assets\Scripts\Right_Button_Properties.cs" />
