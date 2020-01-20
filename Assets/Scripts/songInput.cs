@@ -73,8 +73,8 @@ public class songInput : MonoBehaviour
             //possibly a way to see the mulitpile touchpositions?
             string touchpos = "" + touchPosition + i;
             Debug.Log(touchpos);
-            
-            if (Input.GetTouch(i).phase == TouchPhase.Began && touchPosition.x <= -0.90 && touchPosition.y <= -3)
+            //&& touchPosition.y <= -3
+            if (Input.GetTouch(i).phase == TouchPhase.Began && touchPosition.x <= -0.90 )
             {
                 
                 this.GetComponent<Renderer>().material.color = Color.blue;

@@ -23,9 +23,9 @@ public class Right_Button_Properties : songInput
             Debug.Log(touchpos);
 
 
-            
+            //&& touchPosition.y <= -3
 
-            if (Input.GetTouch(i).phase == TouchPhase.Began && touchPosition.x >= 0 && touchPosition.y <= -3)
+            if (Input.GetTouch(i).phase == TouchPhase.Began && touchPosition.x >= 0 )
             {
                 this.GetComponent<Renderer>().material.color = Color.blue;
                 pressed_r = true;

@@ -29,9 +29,9 @@ public class SongManager : MonoBehaviour
     public GameObject MusicNote_Multi;
     public GameObject MusicNote_Multi_l;
     //keep all the position-in-beats of notes in the song
-    float[] notes = {1,4,9,10,16,19,25,26,29,33,34, 36,36.5f,39,42.5f,43,45,49,51,53,55,57,62,64,65, 66,67.5f,68, 71,72.5f,74,75,76,81, 82,83,83.5f,84};
-    float[] notes_r = {1,5, 8, 13,15, 17,20,21,24,31,33,35f, 35.5f,41,42,43.5f,44,47,48,50,54,60.5f,65,67,69,69.5f,70,73,75.5F,76.5F,81,82,83,83.5f,84};
-    float[] notes_multi = {11,27,37,72,78 };
+    float[] notes = {1,4,9,10,16,19,25,26,29,33,34, 36,36.5f,39,42.5f,43,45,49,51,53,55,57,62,64,65, 66,67.5f,68, 71,72.5f,74,75,76,81, 82,83,83.5f,84,85,86,87,88};
+    float[] notes_r = {1,5, 8, 13,15, 17,20,21,24,31,33,35f, 35.5f,41,42,43.5f,44,47,48,50,54,60.5f,65,67,69,69.5f,70,73,75.5F,76.5F,81,82,83,83.5f,84,86,88,89};
+    float[] notes_multi = {11,27,37,72,78,90 };
     float[] notes_multi_l = { 80 };
     //the index of the next note to be spawned
     public static int nextIndex = 0;
