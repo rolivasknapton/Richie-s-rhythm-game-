@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8785989756839737261}
   m_Layer: 0
   m_Name: MusicNote_multihit
-  m_TagString: Untagged
+  m_TagString: MusicNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -136,4 +137,7 @@ MonoBehaviour:
   canBePressed: 0
   overLap: 1
   noteCountCollisions: 0
+  activatorCountCollisions: 0
   LerpSpeed: 0
+  Animation_fire: {fileID: 6556745629561735343, guid: 9f2b5aa27828c08429eb393bb433e606,
+    type: 3}

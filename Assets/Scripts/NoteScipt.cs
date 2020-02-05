@@ -14,7 +14,7 @@ public class NoteScipt : MonoBehaviour
     public bool canBePressed;
     public bool overLap = true;
     public int noteCountCollisions = 0;
-    private int  activatorCountCollisions = 0;
+    public int  activatorCountCollisions = 0;
 
     bool note_Early;
     GameObject box;
@@ -78,6 +78,14 @@ public class NoteScipt : MonoBehaviour
             canBePressed = true;
             //Debug.Log("yo");
         }
+        if (activatorCountCollisions >= 2 && songInput.pressed)
+        {
+            text_content.text = "good";
+        }
+        if (activatorCountCollisions >= 2 && songInput.pressed_r)
+        {
+            text_content.text = "good";
+        }
         //deactivator 
         if (overLap == true)
         {
@@ -108,7 +116,7 @@ public class NoteScipt : MonoBehaviour
         }
         else
         {
-            box.GetComponent<Renderer>().material.color = Color.white;
+            //box.GetComponent<Renderer>().material.color = Color.white;
             
         }
         
@@ -126,8 +134,15 @@ public class NoteScipt : MonoBehaviour
         }
         if (other.tag == "Activator_Early")
         {
-            note_Early=true;
-            activatorCountCollisions++;
+            if (songInput.pressed) {
+                note_Early = true; }
+            if (songInput.pressed_r)
+            {
+                note_Early = true;
+            }
+
+            //this makes the early checker interactable
+            //activatorCountCollisions++;
         }
 
         //if the music note is touching another music note
@@ -141,7 +156,7 @@ public class NoteScipt : MonoBehaviour
         //destroy this object when colliding with the end position
         if (other.tag == "EndPosition")
         {
-            
+            this.gameObject.SetActive(false);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -161,7 +176,7 @@ public class NoteScipt : MonoBehaviour
         if (other.tag == "Activator_Early")
         {
             note_Early = false;
-            
+
         }
 
 
@@ -176,7 +191,7 @@ public class NoteScipt : MonoBehaviour
 
         if (songInput.pressed && canBePressed)
         {
-            print("pressed");
+            //print("pressed");
             this.gameObject.SetActive(false);
             
         }

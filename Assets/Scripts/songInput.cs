@@ -116,7 +116,7 @@ public class songInput : MonoBehaviour
             MakeTopNoteSelectable(gameObjects[0]);
         }
     }
-    public virtual void OnMouseDown()
+    /*public virtual void OnMouseDown()
     {
         
             
@@ -126,7 +126,7 @@ public class songInput : MonoBehaviour
         
         
         
-    }
+    }*/
     private void OnMouseUp()
     {
         pressed = false;

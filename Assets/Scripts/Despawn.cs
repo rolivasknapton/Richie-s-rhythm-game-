@@ -17,8 +17,8 @@ public class Despawn : MonoBehaviour
     IEnumerator Fire_Fade()
     {
 
-        yield return new WaitForSeconds(1f);
-        Debug.Log("yo");
+        yield return new WaitForSeconds(0.2f);
+      
 
 
         this.gameObject.SetActive(false);

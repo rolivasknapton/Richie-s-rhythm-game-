@@ -29,13 +29,21 @@ public class SongManager : MonoBehaviour
     public GameObject MusicNote_Multi;
     public GameObject MusicNote_Multi_l;
     //keep all the position-in-beats of notes in the song
-    float[] notes = {1,4,9,10,16,19,25,26,29,33,34, 36,36.5f,39,42.5f,43,45,49,51,53,55,57,62,64,65, 66,67.5f,68, 71,72.5f,74,75,76,81, 82,83,83.5f,84,85,86,87,88};
-    float[] notes_r = {1,5, 8, 13,15, 17,20,21,24,31,33,35f, 35.5f,41,42,43.5f,44,47,48,50,54,60.5f,65,67,69,69.5f,70,73,75.5F,76.5F,81,82,83,83.5f,84,86,88,89};
-    float[] notes_multi = {11,27,37,72,78,90 };
-    float[] notes_multi_l = { 80 };
+    float[] notes = {1,4,9,10,16,19,25,26,29,33,34, 36,36.5f,39,42.5f,43,45,49,51,53,55,57,62,64,65, 66,67.5f,68, 71,72.5f,74,75,76,81, 82,83,83.5f,84,85,86,87,88,89,91,93.5F,94.5F,95.5F,96.5F,97,98,99,100,101,103,104,104.5f,105,105.5f,106.5f,109,109.5f,110,110.5f,113,117,118,119,123,124,125,129,133,137,141,145,149,153,157};
+    float[] notes_r = {1,5, 8, 13,15, 17,20,21,24,31,33,35f, 35.5f,41,42,43.5f,44,47,48,50,54,60.5f,65,67,69,69.5f,70,73,75.5F,76.5F,81,82,83,83.5f,84,85,87,88.5F,92.5F,93,97,99,101,102,103,107,108.5f,111,113,114,115,116.5f,119.5f,120,120.5f,121,122,129,131,133,137,141,145,149,153,157};
+    float[] notes_multi = {11,27,37,72,78,90,126 };
+    float[] notes_multi_l = { 80,112,127.5f };
+
+    
+    float [] notes_space_left= {11,11.5f,12.5f, 14,14.5f,15,16,16.5f};
+    float[] notes_space_right= { 13.5f,15.5f };
+    float[] notes_space_left_multi ={  };
+    float[] notes_space_right_multi ={  };
+    
     //the index of the next note to be spawned
-    public static int nextIndex = 0;
-    public static int nextIndex_r = 0;
+    private static int shift = 0;
+    public static int nextIndex = 0+shift;
+    public static int nextIndex_r = 0+shift;
     public static int nextIndex_multi = 0;
     public static int nextIndex_multi_l = 0;
 
@@ -49,13 +57,12 @@ public class SongManager : MonoBehaviour
     Renderer cubeRenderer;
 
 
-    private float shift = 10f;
+    
     // Start is called before the first frame update
     void Start()
     {
         firstBeatOffset =0f;
         Setbeatsperminute();
-       
 
         //Create a new cube primitive to set the color on
 
@@ -74,7 +81,7 @@ public class SongManager : MonoBehaviour
     }
     
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         
         //calculate the position in seconds
@@ -84,7 +91,7 @@ public class SongManager : MonoBehaviour
 
 
         //calculate the position in beats
-        songPosInBeats = songPosition / secPerBeat ;
+        songPosInBeats = (songPosition / secPerBeat)+shift ;
 
         //note spawners
         if (nextIndex < notes.Length && notes[nextIndex] < songPosInBeats + beatsShownInAdvance)
@@ -127,10 +134,10 @@ public class SongManager : MonoBehaviour
 
 
         //spawns the metronome when the first beat is played. 
-        if (songPosInBeats >= 2&&metroisnothere)
+        /*if (songPosInBeats >= 16 &&metroisnothere)
         {
-            //Instantiate(metro, new Vector3(0, 0, 0), Quaternion.identity); metroisnothere = false;
-        }
+            Instantiate(metro, new Vector3(0, 0, 0), Quaternion.identity); metroisnothere = false;
+        }*/
         //Debug.Log(songPosInBeats);
     }
 
@@ -147,5 +154,62 @@ public class SongManager : MonoBehaviour
         yield return null;
 
     }
-    
+
+    //space notes update
+    public void Space_Notes()
+    {
+        //calculate the position in seconds
+        songPosition = (float)(AudioSettings.dspTime - dsptimesong - firstBeatOffset);
+
+
+
+
+        //calculate the position in beats
+        songPosInBeats = (songPosition / secPerBeat);
+
+        //note spawners
+        if (nextIndex < notes_space_left.Length && notes_space_left[nextIndex] < songPosInBeats + beatsShownInAdvance)
+        {
+            Instantiate(MusicNote, new Vector3(-.92f, 3.76f, 0), Quaternion.identity);
+
+
+
+
+            nextIndex++;
+        }
+        if (nextIndex_r < notes_space_right.Length && notes_space_right[nextIndex_r] < songPosInBeats + beatsShownInAdvance)
+        {
+            Instantiate(MusicNote_R, new Vector3(.92f, 3.76f, 0), Quaternion.identity);
+
+
+
+
+            nextIndex_r++;
+        }
+        if (nextIndex_multi < notes_space_right_multi.Length && notes_space_right_multi[nextIndex_multi] < songPosInBeats + beatsShownInAdvance)
+        {
+            Instantiate(MusicNote_Multi, new Vector3(.92f, 3.76f, 0), Quaternion.identity);
+
+
+
+
+            nextIndex_multi++;
+        }
+        if (nextIndex_multi_l < notes_space_left_multi.Length && notes_space_left_multi[nextIndex_multi_l] < songPosInBeats + beatsShownInAdvance)
+        {
+            Instantiate(MusicNote_Multi_l, new Vector3(-.92f, 3.76f, 0), Quaternion.identity);
+
+
+
+
+            nextIndex_multi_l++;
+        }
+        //spawns the metronome when the first beat is played. 
+        if (songPosInBeats >= 8 && metroisnothere)
+        {
+            Instantiate(metro, new Vector3(0, 0, 0), Quaternion.identity); metroisnothere = false;
+        }
+        //Debug.Log(songPosInBeats);   
+    }
+
 }

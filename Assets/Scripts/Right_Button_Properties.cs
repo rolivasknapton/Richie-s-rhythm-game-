@@ -70,7 +70,7 @@ public class Right_Button_Properties : songInput
 
         nrScript.overLap = false;
     }
-    public override void OnMouseDown()
+    /*public override void OnMouseDown()
     {
 
 
@@ -79,5 +79,5 @@ public class Right_Button_Properties : songInput
         
 
 
-    }
+    }*/
 }

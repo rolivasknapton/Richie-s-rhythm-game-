@@ -9,14 +9,19 @@ public class Menu : MonoBehaviour
     private IEnumerator coroutine;
     public void ButtonClick()
     {
-        coroutine = ButtonPressedAnim(1); SceneManager.LoadScene(1);
+        //coroutine = ButtonPressedAnim(1); SceneManager.LoadScene(1);
+        StartCoroutine(ButtonPressedAnim(1));
+    }
+    public void ButtonClicktwo()
+    {
+        StartCoroutine(ButtonPressedAnim(2));
     }
     // Start is called before the first frame update
     void Start()
     {
         
-        coroutine = ButtonPressedAnim(1);
-        SceneManager.LoadScene(1);   
+        //coroutine = ButtonPressedAnim(1);
+        //SceneManager.LoadScene(1);   
     }
     /*public void LoadA(string scenename)
     {
