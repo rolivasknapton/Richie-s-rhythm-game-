@@ -5,7 +5,7 @@ using UnityEngine;
 public class Note_Multihit_l : NoteScipt
 {
     public GameObject Animation_fire;
-    Vector2 SpawnPos_ml = new Vector2(-.92f, 3.76f);
+    Vector2 SpawnPos_ml = new Vector2(-.92f, 4.76f);
     Vector2 RemovePos_ml = new Vector2(-.92f, -5.7f);
     // Start is called before the first frame update
     public override void Move()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Right_Note_Properties : NoteScipt
 {
-    Vector2 SpawnPos_R = new Vector2(.92f, 3.76f);
+    Vector2 SpawnPos_R = new Vector2(.92f, 4.76f);
     Vector2 RemovePos_R = new Vector2(.92f, -5.7f);
 
     

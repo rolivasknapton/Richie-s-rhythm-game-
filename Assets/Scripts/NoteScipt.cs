@@ -28,7 +28,7 @@ public class NoteScipt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnPos = new Vector2(-.92f, 3.76f);
+        SpawnPos = new Vector2(-.92f, 4.76f);
         RemovePos = new Vector2(-.92f, -5.7f);
             
         beatOfThisNote = SongManager.songPosInBeats;
@@ -70,6 +70,7 @@ public class NoteScipt : MonoBehaviour
         //how fast the notes fall
 
         LerpSpeed = ((beatOfThisNote - SongManager.songPosInBeats) * -1) / 7;
+        //i picked this speed . at this rate it takes 6 beats before the note reaches the button
         
 
         //activator
