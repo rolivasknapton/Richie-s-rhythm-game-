@@ -48,21 +48,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11334}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11762}
+      Script: {instanceID: 11764}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 13024}
+      Script: {instanceID: 13026}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -121,35 +121,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11334}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11648}
+      Script: {instanceID: 11650}
     - Class: 114
-      Script: {instanceID: 11722}
+      Script: {instanceID: 11724}
     - Class: 114
-      Script: {instanceID: 11762}
+      Script: {instanceID: 11764}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 12126}
+      Script: {instanceID: 12128}
     - Class: 114
-      Script: {instanceID: 12350}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 12634}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12762}
+      Script: {instanceID: 12764}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 12988}
+      Script: {instanceID: 12990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -218,37 +218,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11334}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11648}
+      Script: {instanceID: 11650}
     - Class: 114
-      Script: {instanceID: 11722}
+      Script: {instanceID: 11724}
     - Class: 114
-      Script: {instanceID: 11762}
+      Script: {instanceID: 11764}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 12126}
+      Script: {instanceID: 12128}
     - Class: 114
-      Script: {instanceID: 12350}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 12428}
+      Script: {instanceID: 12430}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 12634}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12762}
+      Script: {instanceID: 12764}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 12988}
+      Script: {instanceID: 12990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -392,7 +392,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 79efa2517829227eff44c8651142d6a0
+      Hash: f150dbc7cc52372a4170574c9952265d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SongManager
@@ -602,7 +602,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 79efa2517829227eff44c8651142d6a0
+      Hash: f150dbc7cc52372a4170574c9952265d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SongManager_2
