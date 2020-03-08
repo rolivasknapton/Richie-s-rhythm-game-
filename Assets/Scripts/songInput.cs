@@ -62,6 +62,7 @@ public class songInput : MonoBehaviour
         }
         */
     }
+    
     public virtual void Find_Touch_Position()
     {
         for (int i = 0; i < Input.touchCount; i++)
@@ -70,10 +71,9 @@ public class songInput : MonoBehaviour
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
             Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
 
-            //possibly a way to see the mulitpile touchpositions?
-            string touchpos = "" + touchPosition + i;
-            Debug.Log(touchpos);
+            
             //&& touchPosition.y <= -3
+
             if (Input.GetTouch(i).phase == TouchPhase.Began && touchPosition.x <= -0.90 )
             {
                 
@@ -81,19 +81,14 @@ public class songInput : MonoBehaviour
                 pressed = true;
                 
             }
+            
             else
             {
                 this.GetComponent<Renderer>().material.color = Color.white;
                 pressed = false;
             }
-            /*
-            if (Input.GetTouch(i).phase == TouchPhase.Ended)
-            {
-                this.GetComponent<Renderer>().material.color = Color.white;
-                pressed = false;
-              
-            }
-            */
+
+            
 
 
         }

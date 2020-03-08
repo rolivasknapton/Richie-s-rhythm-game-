@@ -11,7 +11,13 @@ public class Despawn : MonoBehaviour
     void Start()
     {
         StartCoroutine("Fire_Fade");
+
         transform.localScale = new Vector3(x, y, z);
+    }
+    private void Update()
+    {
+        
+        
     }
 
     IEnumerator Fire_Fade()
