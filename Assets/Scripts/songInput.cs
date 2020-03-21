@@ -29,7 +29,11 @@ public class songInput : MonoBehaviour
 
 
         //touch and creates lines
-        Find_Touch_Position();
+        if (Input.touchCount > 0)
+        {
+            Find_Touch_Position();
+        }
+            
         
 
         /*
@@ -71,22 +75,29 @@ public class songInput : MonoBehaviour
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
             Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
 
-            
-            //&& touchPosition.y <= -3
 
-            if (Input.GetTouch(i).phase == TouchPhase.Began && touchPosition.x <= -0.90 )
+            //&& touchPosition.y <= -3
+            if (touchPosition.x <= -0.90)
             {
-                
-                this.GetComponent<Renderer>().material.color = Color.blue;
-                pressed = true;
-                
+                switch(Input.GetTouch(i).phase)
+                {
+                    case TouchPhase.Began:
+                        this.GetComponent<Renderer>().material.color = Color.blue;
+                        pressed = true;
+                        break;
+                    case TouchPhase.Ended:
+                        this.GetComponent<Renderer>().material.color = Color.white;
+                        break;
+
+
+                    default:
+                        
+                        pressed = false;
+                        break;
+                }
+               
             }
             
-            else
-            {
-                this.GetComponent<Renderer>().material.color = Color.white;
-                pressed = false;
-            }
 
             
 

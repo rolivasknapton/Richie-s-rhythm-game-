@@ -18,27 +18,34 @@ public class Right_Button_Properties : songInput
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
             Debug.DrawLine(Vector3.zero, touchPosition, Color.red);
 
-            
+
 
 
             //&& touchPosition.y <= -3
 
-            
-            if (Input.GetTouch(i).phase == TouchPhase.Began && touchPosition.x >= 0)
+            if (touchPosition.x >= 0)
             {
+                switch (Input.GetTouch(i).phase)
+                {
+                    case TouchPhase.Began:
+                        this.GetComponent<Renderer>().material.color = Color.blue;
+                        pressed_r = true;
+                        break;
+                    case TouchPhase.Ended:
+                        this.GetComponent<Renderer>().material.color = Color.white;
+                        break;
 
-                this.GetComponent<Renderer>().material.color = Color.blue;
-                pressed_r = true;
-                
-            }
-          
-            else
-            {
-                this.GetComponent<Renderer>().material.color = Color.white;
-                pressed_r = false;
+
+                    default:
+
+                        pressed_r = false;
+                        break;
+                }
+
             }
 
-            
+
+
 
 
         }
