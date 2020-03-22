@@ -9,12 +9,12 @@ public class PressAnimation : MonoBehaviour
     public GameObject Animation;
     private void Update()
     {
-        if (songInput.pressed)
+        if (songInput.held)
         {
             Instantiate(Animation);
         }
 
-        if (songInput.pressed_r)
+        if (songInput.held_r)
         {
             Instantiate(Animation_two);
         }

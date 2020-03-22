@@ -30,9 +30,11 @@ public class Right_Button_Properties : songInput
                     case TouchPhase.Began:
                         this.GetComponent<Renderer>().material.color = Color.blue;
                         pressed_r = true;
+                        held_r = true;
                         break;
                     case TouchPhase.Ended:
                         this.GetComponent<Renderer>().material.color = Color.white;
+                        held_r = false;
                         break;
 
 

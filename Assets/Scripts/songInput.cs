@@ -5,8 +5,10 @@ using UnityEngine;
 public class songInput : MonoBehaviour
 {
     public static bool pressed = false;
-    
     public static bool pressed_r = false;
+
+    public static bool held = false;
+    public static bool held_r = false;
     public NoteScipt noteScript;
     private List<GameObject> noteList;
     private GameObject first;
@@ -84,9 +86,11 @@ public class songInput : MonoBehaviour
                     case TouchPhase.Began:
                         this.GetComponent<Renderer>().material.color = Color.blue;
                         pressed = true;
+                        held = true;
                         break;
                     case TouchPhase.Ended:
                         this.GetComponent<Renderer>().material.color = Color.white;
+                        held = false;
                         break;
 
 
