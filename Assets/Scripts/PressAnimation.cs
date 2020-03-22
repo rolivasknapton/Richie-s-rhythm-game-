@@ -9,17 +9,29 @@ public class PressAnimation : MonoBehaviour
     public GameObject Animation;
     private void Update()
     {
+        
         if (songInput.held)
         {
-            Instantiate(Animation);
+           
+                Instantiate(Animation);
+            
+
+            
         }
+        else
+        
 
         if (songInput.held_r)
         {
-            Instantiate(Animation_two);
+            
+            
+                Instantiate(Animation_two);
+            
         }
+        
+        
     }
-    
-    
-    
+   
+
+
 }
