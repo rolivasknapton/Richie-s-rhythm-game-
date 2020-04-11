@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7782821830745465059}
   - component: {fileID: 7782821830726042239}
   - component: {fileID: 7782821830725435757}
-  - component: {fileID: 7433127953598054666}
   - component: {fileID: 5105880823037730271}
+  - component: {fileID: 1315832813810704342}
   m_Layer: 0
   m_Name: Candle 1
   m_TagString: Untagged
@@ -4712,6 +4712,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4760,21 +4761,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7433127953598054666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782821830745197163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a42ab84f0bb4e84c87d4bf94bc599a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0.1
-  y: 0.1
-  z: 0.1
 --- !u!1818360610 &5105880823037730271
 ScaleConstraint:
   m_ObjectHideFlags: 0
@@ -4794,6 +4780,23 @@ ScaleConstraint:
   m_Sources:
   - sourceTransform: {fileID: 0}
     weight: 1
+--- !u!114 &1315832813810704342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782821830745197163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970e849dccb477a4d8ee8fc836934fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0.1
+  y: 0.1
+  z: 0.1
+  held_check: 0
+  held_right_check: 0
 --- !u!1 &7782821830745210985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9445,6 +9448,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14144,6 +14148,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14231,8 +14236,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7782821830745236361}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.024221476, g: 0.5920057, b: 0.8235294, a: 1}
   m_Intensity: 3
   m_Range: 20
@@ -18934,6 +18940,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -23633,6 +23640,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

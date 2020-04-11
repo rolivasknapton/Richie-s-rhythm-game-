@@ -19,6 +19,7 @@ public class NoteScipt : MonoBehaviour
     bool note_Early;
     GameObject box;
     GameObject text;
+    public GameObject sprite_perfect;
     private Text text_content;
 
     
@@ -192,9 +193,11 @@ public class NoteScipt : MonoBehaviour
 
         if (songInput.pressed && canBePressed)
         {
+            
             //print("pressed");
             this.gameObject.SetActive(false);
-            
+            Instantiate(sprite_perfect, new Vector3(.92f, 4.76f, 0), Quaternion.identity);
+
         }
     }
     

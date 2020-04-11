@@ -995,9 +995,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &624114435
 MeshRenderer:
@@ -1775,6 +1775,8 @@ MonoBehaviour:
   Animation_two: {fileID: 7782821830745197163, guid: 8d74495ecf42afd4289f3dfe01198a2b,
     type: 3}
   Animation: {fileID: 176132, guid: 0fb7af8b558617043bb7695988ca9715, type: 3}
+  left_flame_active: 0
+  right_flame_active: 0
 --- !u!1 &1347280755
 GameObject:
   m_ObjectHideFlags: 0

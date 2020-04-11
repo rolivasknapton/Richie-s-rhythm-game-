@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatOfThisNote: 0
   canBePressed: 0
-  overLap: 1
+  overLap: 0
   noteCountCollisions: 0
+  activatorCountCollisions: 0
+  sprite_perfect: {fileID: 6811837628797604525, guid: 9886c7e5b53fcc449abbb31b2b6e36ed,
+    type: 3}
   LerpSpeed: 0
 --- !u!1001 &6205242965823240483
 PrefabInstance:
@@ -24,15 +27,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8159501678196916284, guid: b1e29d457b7ffad46bc06a01c8f77553,
+    - target: {fileID: 1483952188044691722, guid: b1e29d457b7ffad46bc06a01c8f77553,
         type: 3}
-      propertyPath: m_Name
-      value: MusicNote
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159501678196916284, guid: b1e29d457b7ffad46bc06a01c8f77553,
-        type: 3}
-      propertyPath: m_TagString
-      value: MusicNote
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1768452157448880564, guid: b1e29d457b7ffad46bc06a01c8f77553,
         type: 3}
@@ -89,11 +87,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1483952188044691722, guid: b1e29d457b7ffad46bc06a01c8f77553,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7455648531403172781, guid: b1e29d457b7ffad46bc06a01c8f77553,
         type: 3}
       propertyPath: m_Enabled
@@ -103,6 +96,16 @@ PrefabInstance:
         type: 3}
       propertyPath: overLap
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159501678196916284, guid: b1e29d457b7ffad46bc06a01c8f77553,
+        type: 3}
+      propertyPath: m_Name
+      value: MusicNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159501678196916284, guid: b1e29d457b7ffad46bc06a01c8f77553,
+        type: 3}
+      propertyPath: m_TagString
+      value: MusicNote
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1483952188044691722, guid: b1e29d457b7ffad46bc06a01c8f77553, type: 3}

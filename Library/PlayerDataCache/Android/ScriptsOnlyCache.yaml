@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - Right_Note_Properties
     - SongManager
     - SongManager_2
+    - despawn_right_flame
     - songInput
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -54,15 +55,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 12144}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12622}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12978}
     - Class: 114
-      Script: {instanceID: 13026}
+      Script: {instanceID: 13030}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -127,29 +128,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 11650}
+      Script: {instanceID: 11652}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 11990}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 12130}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12354}
     - Class: 114
-      Script: {instanceID: 12622}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12636}
+      Script: {instanceID: 12638}
     - Class: 114
-      Script: {instanceID: 12764}
+      Script: {instanceID: 12758}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12768}
     - Class: 114
-      Script: {instanceID: 12990}
+      Script: {instanceID: 12978}
+    - Class: 114
+      Script: {instanceID: 12994}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -224,31 +227,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 11650}
+      Script: {instanceID: 11652}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 11990}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 12130}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12354}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12622}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12636}
+      Script: {instanceID: 12638}
     - Class: 114
-      Script: {instanceID: 12764}
+      Script: {instanceID: 12758}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12768}
     - Class: 114
-      Script: {instanceID: 12990}
+      Script: {instanceID: 12978}
+    - Class: 114
+      Script: {instanceID: 12994}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -452,7 +457,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 2e4fb5a903777f5e4ac9cd3451a19a73
+      Hash: e5bf274f2be6935fb0843e09c4a2bb50
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Despawn
@@ -650,7 +655,13 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: ec24fbca58659161d66b8dd9a55f3d17
+      Hash: e5bf274f2be6935fb0843e09c4a2bb50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: despawn_right_flame
+  - hash:
+      serializedVersion: 2
+      Hash: ee706027102839c1120fabdbb65f28fe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PressAnimation

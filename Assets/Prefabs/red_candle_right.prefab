@@ -9503,7 +9503,7 @@ GameObject:
   - component: {fileID: 3653992035072777450}
   - component: {fileID: 1608955138331483345}
   - component: {fileID: 4190023283662331184}
-  - component: {fileID: -4263393188802871324}
+  - component: {fileID: -2723269917358042596}
   m_Layer: 0
   m_Name: red_candle_right
   m_TagString: Untagged
@@ -14251,7 +14251,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &-4263393188802871324
+--- !u!114 &-2723269917358042596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14260,12 +14260,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6556745629561735343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a42ab84f0bb4e84c87d4bf94bc599a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 970e849dccb477a4d8ee8fc836934fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0.1
   y: 0.1
   z: 0.1
+  held_check: 0
+  held_right_check: 0
 --- !u!1 &7717367337477006010
 GameObject:
   m_ObjectHideFlags: 0
