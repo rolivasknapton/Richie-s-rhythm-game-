@@ -145,7 +145,7 @@ public class songInput : MonoBehaviour
     
     public virtual void MakeTopNoteSelectable(GameObject first)
     {
-        first.GetComponent<Renderer>().material.color = Color.red;
+        
         NoteScipt nScript = first.GetComponent<NoteScipt>();
 
         nScript.overLap = false;

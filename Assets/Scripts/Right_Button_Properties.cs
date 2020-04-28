@@ -75,7 +75,7 @@ public class Right_Button_Properties : songInput
     }
     public override void MakeTopNoteSelectable(GameObject first_R)
     {
-        first_R.GetComponent<Renderer>().material.color = Color.red;
+        
         NoteScipt nrScript = first_R.GetComponent<NoteScipt>();
 
         nrScript.overLap = false;

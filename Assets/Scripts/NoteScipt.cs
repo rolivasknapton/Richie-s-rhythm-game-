@@ -16,10 +16,11 @@ public class NoteScipt : MonoBehaviour
     public int noteCountCollisions = 0;
     public int  activatorCountCollisions = 0;
 
-    bool note_Early;
+    private bool note_Early;
     GameObject box;
     GameObject text;
     public GameObject sprite_perfect;
+    public GameObject sprite_good;
     private Text text_content;
 
     
@@ -36,7 +37,7 @@ public class NoteScipt : MonoBehaviour
 
         
         // Pick a random, saturated and not-too-dark color
-        GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+        //GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
         
 
@@ -136,26 +137,13 @@ public class NoteScipt : MonoBehaviour
         }
         if (other.tag == "Activator_Early")
         {
-            if (songInput.pressed) {
-                note_Early = true; }
-            if (songInput.pressed_r)
-            {
-                note_Early = true;
-            }
+            
+            note_Early = true;
+            
 
-            //this makes the early checker interactable
-            //activatorCountCollisions++;
         }
 
-        //if the music note is touching another music note
-        /*if (other.tag == "MusicNote")
-        {
-
-            overLap = true;
-          noteCountCollisions++;
-
-        }*/
-        //destroy this object when colliding with the end position
+        
         if (other.tag == "EndPosition")
         {
             this.gameObject.SetActive(false);
@@ -170,10 +158,8 @@ public class NoteScipt : MonoBehaviour
             gameObject.tag = "Unactive";
             //gameObject.SetActive(false);
         }
-        if (other.tag == "MusicNote")
-        {
-            
-        }
+        
+        
 
         if (other.tag == "Activator_Early")
         {
@@ -187,18 +173,26 @@ public class NoteScipt : MonoBehaviour
     }
     public virtual void Pressed()
     {
-        
 
-        
+
+        if (songInput.pressed && note_Early && canBePressed)
+        {
+
+            //print("pressed");
+            this.gameObject.SetActive(false);
+            Instantiate(sprite_good, new Vector3(-0.786f, -2.5f, 0), Quaternion.identity);
+
+        }
 
         if (songInput.pressed && canBePressed)
         {
             
             //print("pressed");
             this.gameObject.SetActive(false);
-            Instantiate(sprite_perfect, new Vector3(.92f, 4.76f, 0), Quaternion.identity);
+            Instantiate(sprite_perfect, new Vector3(-0.786f, -2.5f, 0), Quaternion.identity);
 
         }
+        
     }
     
 }

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8159501678196916284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.756652, y: -1.2075377, z: -24.15797}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 33a3ad1ada27e1d4091690fc693ed1b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,9 +118,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03, y: -0.03}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.2
 --- !u!114 &1483952188044691722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,4 +137,9 @@ MonoBehaviour:
   canBePressed: 0
   overLap: 1
   noteCountCollisions: 0
+  activatorCountCollisions: 0
+  sprite_perfect: {fileID: 6811837628797604525, guid: 9886c7e5b53fcc449abbb31b2b6e36ed,
+    type: 3}
+  sprite_good: {fileID: 2465777915875128294, guid: 72e433b4593599c44b04c3b1fac5d63e,
+    type: 3}
   LerpSpeed: 0

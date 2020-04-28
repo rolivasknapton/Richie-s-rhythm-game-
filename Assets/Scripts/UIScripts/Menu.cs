@@ -16,6 +16,10 @@ public class Menu : MonoBehaviour
     {
         StartCoroutine(ButtonPressedAnim(2));
     }
+    public void ButtonClickBACK()
+    {
+        StartCoroutine(ButtonPressedAnim(0));
+    }
     // Start is called before the first frame update
     void Start()
     {
