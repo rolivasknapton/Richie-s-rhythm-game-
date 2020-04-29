@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SongManager : MonoBehaviour
 {
     int note_number;
@@ -40,7 +41,9 @@ public class SongManager : MonoBehaviour
     float[] notes_space_right= { 13.5f, 14, 15, 18.5f, 19, 19.5F, 20.5f, 24.5f, 26, 27.5f, 28.5f, 29.5f, 30, 30.5f, 31, 32, 33.5F, 34, 34.5f, 34.75f, 35, 36, 36.5F, 37, 38, 39, 40, 44, 46, 49.5f, 50.5f, 52, 53, 54, 54.5f, 55, 57, 57.75f, 58.5f, 59, 61, 62.5f, 63, 65, 66.5f, 70,70.5f, 71,73,74.5f,75,78.25f,78.5f,80,80.5f,85,87, 87.75f,90.75f,92.75f, 95.75f,96,96.25f, 97.50f ,98,99, 100 ,101,102,103,104,105,106,};
                                                                                                                                                                                                                                                 float[] notes_space_left_multi ={43,76,81,87};
                                                                                                                                                                                                                                                float[] notes_space_right_multi ={  47.5f,67,77,107};
-    
+
+    public static int score = 0;
+
     //the index of the next note to be spawned
     private static int shift = 0;
     public static int nextIndex = 0+shift;
@@ -147,6 +150,7 @@ public class SongManager : MonoBehaviour
     {
         bpm = 161f;
     }
+
         //why is this an IEnumerator?
     IEnumerator songStart()
     {
@@ -156,7 +160,24 @@ public class SongManager : MonoBehaviour
         yield return null;
 
     }
+    public static class Utilities
+    {
+        //A static method can be invoked without an object
+        //of a class. Note that static methods cannot access
+        //non-static member variables.
+        public static void scoreAdd()
+        {
+            score++;
+            
+        }
+    }
 
+    public void addToScore()
+    {
+        score++;
+        this.gameObject.SetActive(false);
+        
+    }
     //space notes update
     public void Space_Notes()
     {

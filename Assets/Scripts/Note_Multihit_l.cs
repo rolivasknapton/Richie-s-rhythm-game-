@@ -17,7 +17,9 @@ public class Note_Multihit_l : NoteScipt
     {
         if (songInput.pressed && canBePressed)
         {
+
             print("pressed");
+            SongManager.Utilities.scoreAdd();
             this.gameObject.SetActive(false);
             Instantiate(Animation_fire);
 

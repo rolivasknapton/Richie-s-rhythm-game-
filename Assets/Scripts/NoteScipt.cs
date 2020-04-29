@@ -179,15 +179,18 @@ public class NoteScipt : MonoBehaviour
         {
 
             //print("pressed");
+            SongManager.Utilities.scoreAdd();
             this.gameObject.SetActive(false);
+
             Instantiate(sprite_good, new Vector3(-0.786f, -2.5f, 0), Quaternion.identity);
 
         }
 
         if (songInput.pressed && canBePressed)
         {
-            
+
             //print("pressed");
+            SongManager.Utilities.scoreAdd();
             this.gameObject.SetActive(false);
             Instantiate(sprite_perfect, new Vector3(-0.786f, -2.5f, 0), Quaternion.identity);
 

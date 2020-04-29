@@ -52,6 +52,7 @@ public class Right_Note_Properties : NoteScipt
         {
 
             //print("pressed");
+            SongManager.Utilities.scoreAdd();
             this.gameObject.SetActive(false);
             Instantiate(sprite_good, new Vector3(0.786f, -2.5f, 0), Quaternion.identity);
 
@@ -59,6 +60,7 @@ public class Right_Note_Properties : NoteScipt
         if (Right_Button_Properties.pressed_r && canBePressed)
         {
             //print("pressed");
+            SongManager.Utilities.scoreAdd();
             this.gameObject.SetActive(false);
             Instantiate(sprite_perfect, new Vector3(0.786f, -2.5f, 0), Quaternion.identity);
         }

@@ -21,6 +21,7 @@ public class Note_Multihit : NoteScipt
         if(songInput.pressed_r && canBePressed )//&& (Input.GetTouch(0).phase ==TouchPhase.Stationary)
         {
             print("pressed");
+            SongManager.Utilities.scoreAdd();
             this.gameObject.SetActive(false);
             Instantiate(Animation_fire);
 
